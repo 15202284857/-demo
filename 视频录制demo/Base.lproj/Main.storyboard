@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fp1-ID-Awb">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="uiimagePickercontroller开始录制"/>
+                                <connections>
+                                    <action selector="takeClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3cy-K5-AjL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyk-rE-bvW">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="通过AVFoundation框架实现拍照"/>
+                                <connections>
+                                    <action selector="avfoundation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E3d-Gq-nTT"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t4u-sQ-VXN">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.67361015329999996" blue="0.56149260329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="kHl-4O-gXb"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="kHl-4O-gXb"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="kHl-4O-gXb"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PR-cb-0XE">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="avFoundation拍摄视频"/>
+                                <connections>
+                                    <action selector="recordVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x47-1z-oPK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t4u-sQ-VXN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1nU-AG-h2r"/>
+                            <constraint firstAttribute="trailing" secondItem="t4u-sQ-VXN" secondAttribute="trailing" id="7hJ-Uv-IbO"/>
+                            <constraint firstItem="Fp1-ID-Awb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CLJ-Mb-cdC"/>
+                            <constraint firstItem="Fp1-ID-Awb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="D9r-xU-WPg"/>
+                            <constraint firstItem="iyk-rE-bvW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yl1-JG-Veg"/>
+                            <constraint firstItem="t4u-sQ-VXN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eAU-yU-wWY"/>
+                            <constraint firstItem="iyk-rE-bvW" firstAttribute="top" secondItem="1PR-cb-0XE" secondAttribute="bottom" constant="54" id="hTO-wJ-HBy"/>
+                            <constraint firstItem="1PR-cb-0XE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qAd-Jd-0U6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iyk-rE-bvW" secondAttribute="bottom" id="tZh-AM-QdS"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Fp1-ID-Awb"/>
+                                <exclude reference="iyk-rE-bvW"/>
+                                <exclude reference="t4u-sQ-VXN"/>
+                                <exclude reference="1PR-cb-0XE"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1nU-AG-h2r"/>
+                                <exclude reference="7hJ-Uv-IbO"/>
+                                <exclude reference="eAU-yU-wWY"/>
+                                <exclude reference="CLJ-Mb-cdC"/>
+                                <exclude reference="D9r-xU-WPg"/>
+                                <exclude reference="qAd-Jd-0U6"/>
+                                <exclude reference="Yl1-JG-Veg"/>
+                                <exclude reference="hTO-wJ-HBy"/>
+                                <exclude reference="tZh-AM-QdS"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Fp1-ID-Awb"/>
+                                <include reference="iyk-rE-bvW"/>
+                                <include reference="t4u-sQ-VXN"/>
+                                <include reference="1PR-cb-0XE"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1nU-AG-h2r"/>
+                                <include reference="7hJ-Uv-IbO"/>
+                                <include reference="eAU-yU-wWY"/>
+                                <include reference="CLJ-Mb-cdC"/>
+                                <include reference="D9r-xU-WPg"/>
+                                <include reference="qAd-Jd-0U6"/>
+                                <include reference="Yl1-JG-Veg"/>
+                                <include reference="hTO-wJ-HBy"/>
+                                <include reference="tZh-AM-QdS"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="photo" destination="t4u-sQ-VXN" id="Isb-wS-5Xj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="322.5" y="203.25"/>
+        </scene>
+    </scenes>
+</document>
